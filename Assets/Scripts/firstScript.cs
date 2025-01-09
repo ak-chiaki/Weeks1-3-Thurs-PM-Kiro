@@ -16,8 +16,21 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         Vector2 pos = transform.position;
-        pos.x += 1;
+        pos.x += speed;
+
+        Vector2 suqareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
+
+        if (suqareInScreenSpace.x < -10 || suqareInScreenSpace.x > Screen.width)
+        {
+            speed = speed * 1;
+        }
+
+
+
+
+
         transform.position = pos;
+
 
 
 
