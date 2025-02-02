@@ -21,7 +21,7 @@ public class curtain : MonoBehaviour
             isMoving = true; // start moving
         }
 
-        if (isMoving&&!direction)
+        if (isMoving&&!direction)//jusge the direction
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);//move to the right
             Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);// get the screen position
@@ -34,6 +34,7 @@ public class curtain : MonoBehaviour
         {
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);//move to the left
             Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);// get the screen position
+
             if (screenPos.x <= 0)
             {
                 isMoving = false; // stop moving while reach to the edge of screen

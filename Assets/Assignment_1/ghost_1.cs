@@ -23,7 +23,6 @@ public class ghost_1 : MonoBehaviour
         }
         float movement = movingCurve.Evaluate(time) * speed * direction * Time.deltaTime;//calculate the movement
         transform.position += new Vector3(movement, 0, 0);
-
         time += Time.deltaTime; //update the time
     }
 }
